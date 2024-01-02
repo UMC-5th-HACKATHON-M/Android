@@ -6,8 +6,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.TextView
 import androidx.fragment.app.Fragment
+import com.example.umc_5th_hackathon_m.R
 import com.example.umc_5th_hackathon_m.databinding.FragmentPageBinding
+import com.example.umc_5th_hackathon_m.databinding.FragmentPageLogoutBinding
 
 class PageFragment : Fragment() {
     private lateinit var binding : FragmentPageBinding
@@ -34,22 +38,31 @@ class PageFragment : Fragment() {
 
 
     private fun showLogoutConfirmationDialog() {
-        val builder = AlertDialog.Builder(requireContext())
-        builder.setTitle("로그아웃")
-            .setMessage("로그아웃하시겠습니까?")
-            .setPositiveButton("확인") { dialog: DialogInterface, which: Int ->
-                // 여기에 로그아웃 처리 코드 추가
-                // 예: 로그아웃 메서드 호출 또는 세션 초기화 등
-                // 예: FirebaseAuth.getInstance().signOut() // Firebase 사용 시 로그아웃
-                dialog.dismiss()
-            }
-            .setNegativeButton("취소") { dialog: DialogInterface, which: Int ->
-                // 취소 버튼을 눌렀을 때의 동작 (아무 것도 안해도 됨)
-                dialog.dismiss()
-            }
-            .show()
-    }
+        val dialogView =
+            LayoutInflater.from(requireContext()).inflate(R.layout.fragment_page_logout, null)
+        val customDialog = AlertDialog.Builder(requireContext())
+            .setView(dialogView)
+            .create()
 
+        val bodyTextView = dialogView.findViewById<TextView>(R.id.bodyTextView)
+        val positiveButton = dialogView.findViewById<Button>(R.id.positiveButton)
+        val negativeButton = dialogView.findViewById<Button>(R.id.negativeButton)
+
+
+        bodyTextView.text = "로그아웃 하시겠습니까?"
+
+        positiveButton.setOnClickListener {
+            // 확인 버튼을 눌렀을 때의 동작
+            customDialog.dismiss()
+        }
+
+        negativeButton.setOnClickListener {
+            // 취소 버튼을 눌렀을 때의 동작
+            customDialog.dismiss()
+        }
+
+        customDialog.show()
+    }
 
 
 

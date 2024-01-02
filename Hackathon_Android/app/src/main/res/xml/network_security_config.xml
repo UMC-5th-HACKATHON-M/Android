@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <!-- 디바이스에서 신뢰하는 인증서 추가 (옵션) -->
+            <!--<certificates src="system" />-->
+            <!--<certificates src="user" />-->
+        </trust-anchors>
+    </base-config>
+    <!-- 추가적인 구성이 필요하다면 여기에 추가 -->
+</network-security-config>

@@ -20,11 +20,34 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         setFabClickListener()
 
         supportFragmentManager.beginTransaction()
             .replace(R.id.main_frm, DiaryFragment())
             .commitAllowingStateLoss()
+
+//        binding = ActivityMainBinding.inflate(layoutInflater)
+//        setContentView(binding.root)
+//
+//        setFabClickListener()
+//
+//        supportFragmentManager.beginTransaction()
+//            .replace(R.id.main_frm, DiaryFragment())
+//            .commitAllowingStateLoss()
+
+//        val kakaoTransaction = supportFragmentManager.beginTransaction()
+//        val kakaoFragment = KakaoFragment() // 실제 사용하는 KakaoFragment 클래스로 변경
+//        kakaoTransaction.add(R.id.main_frm, kakaoFragment)
+//        kakaoTransaction.commit()
+//
+//        // DiaryFragment 트랜잭션 시작
+//        val diaryTransaction = supportFragmentManager.beginTransaction()
+//        val diaryFragment = DiaryFragment() // 실제 사용하는 DiaryFragment 클래스로 변경
+//        diaryTransaction.add(R.id.main_frm, diaryFragment)
+//        diaryTransaction.commit()
+
+
     }
 
     private fun setFabClickListener() {
