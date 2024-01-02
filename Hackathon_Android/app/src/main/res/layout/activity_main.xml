@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.main.MainActivity">
+
     <FrameLayout
         android:id="@+id/main_frm"
         android:layout_width="match_parent"
@@ -13,48 +14,46 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/main_fab1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:fabSize="mini"
-                app:layout_constraintBottom_toBottomOf="@id/main_fabMain"
-                app:layout_constraintEnd_toEndOf="@id/main_fabMain"/>
-
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/main_fab2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:fabSize="mini"
-                app:layout_constraintBottom_toBottomOf="@id/main_fabMain"
-                app:layout_constraintEnd_toEndOf="@id/main_fabMain"/>
-
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/main_fab3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:fabSize="mini"
-                app:layout_constraintBottom_toBottomOf="@id/main_fabMain"
-                app:layout_constraintEnd_toEndOf="@id/main_fabMain"/>
-
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/main_fabMain"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="10sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
 
     </FrameLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/main_fab1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fabSize="mini"
+            app:layout_constraintBottom_toBottomOf="@id/main_fabMain"
+            app:layout_constraintEnd_toEndOf="@id/main_fabMain"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/main_fab2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fabSize="mini"
+            app:layout_constraintBottom_toBottomOf="@id/main_fabMain"
+            app:layout_constraintEnd_toEndOf="@id/main_fabMain"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/main_fab3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fabSize="mini"
+            app:layout_constraintBottom_toBottomOf="@id/main_fabMain"
+            app:layout_constraintEnd_toEndOf="@id/main_fabMain"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/main_fabMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 
