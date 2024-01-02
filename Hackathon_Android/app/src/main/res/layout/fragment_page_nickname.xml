@@ -146,6 +146,7 @@
             android:layout_margin="8dp"
             android:layout_weight="1"
             android:text="취소"
+            />
 
         <!-- 확인 버튼 -->
         <Button
@@ -155,6 +156,7 @@
             android:layout_margin="8dp"
             android:layout_weight="1"
             android:text="확인"
+            />
 
     </LinearLayout>
 
