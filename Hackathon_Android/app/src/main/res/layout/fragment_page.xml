@@ -32,25 +32,29 @@
                     android:layout_height="180dp"
                     >
 
-                    <com.google.android.material.imageview.ShapeableImageView
+                    <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/profilePic"
-                        android:layout_width="130dp"
-                        android:layout_height="130dp"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
                         android:layout_centerInParent="true"
                         android:layout_gravity="center"
-                        android:src="@drawable/scott_album" />
+                        android:src="@drawable/scott_album"
+                        app:civ_border_color="#FF000000"
+                        app:civ_border_width="2dp" />
 
                     <ImageButton
-                        android:id="@+id/editButton"
+                        android:id="@+id/roundEditButton"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:background="@color/black"
                         android:src="@android:drawable/ic_menu_edit"
-                        android:layout_alignBottom="@+id/profilePic"
-                        android:layout_alignStart="@+id/profilePic"
-                        android:layout_marginStart="100dp"
-                        android:layout_marginBottom="-15dp"
+                        android:background="@drawable/round_button_background"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginEnd="100dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true"
+
                         />
+
 
                 </RelativeLayout>
 

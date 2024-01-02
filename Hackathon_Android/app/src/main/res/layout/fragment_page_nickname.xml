@@ -58,6 +58,7 @@
             app:cardBackgroundColor="@color/blue3">
 
             <LinearLayout
+                android:id="@+id/changing_nickname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -95,34 +96,29 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
+                android:orientation="horizontal"
                 android:padding="15dp">
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
+                <Button
+                    android:id="@+id/cancelButton"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/black"
-                        android:text=""
-                        android:textSize="15sp"
-                        android:layout_alignParentStart="true"
-                        android:textStyle="bold"/>
-                </RelativeLayout>
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:text="취소"
+                    />
 
-                <GridLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:useDefaultMargins="true"
-                    android:rowCount="1"
-                    android:columnCount="3">
+                <!-- 확인 버튼 -->
+                <Button
+                    android:id="@+id/confirmButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:text="확인"
+                    />
 
 
-
-                </GridLayout>
             </LinearLayout>
 
         </com.google.android.material.card.MaterialCardView>
@@ -130,35 +126,7 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-       >
 
-        <!-- 취소 버튼 -->
-        <Button
-            android:id="@+id/cancelButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:layout_weight="1"
-            android:text="취소"
-            />
-
-        <!-- 확인 버튼 -->
-        <Button
-            android:id="@+id/confirmButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:layout_weight="1"
-            android:text="확인"
-            />
-
-    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
