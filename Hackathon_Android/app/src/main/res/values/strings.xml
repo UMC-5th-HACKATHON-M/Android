@@ -12,6 +12,7 @@
     <string name="amit_kumar">Amit Kumar</string>
     <string name="nickname">닉네임 변경</string>
     <string name="logout">로그 아웃</string>
+    <string name="nicknamechange">변경할 닉네임을 작성해주세요.</string>
 
 
 </resources>
